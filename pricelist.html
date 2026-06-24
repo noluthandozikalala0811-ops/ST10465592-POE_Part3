@@ -2,17 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Price List</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<h2>Price List</h2>
+    <h2>Price List</h2>
 
-<p>Contact us for updated pricing 💅</p>
+    <!-- WHATSAPP -->
+    <a class="whatsapp" href="https://wa.me/27700000000" target="_blank">💬</a>
 
-<a href="index.html">Back Home</a>
+<!-- MODAL -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">×</span>
+
+        <h2>Price List</h2>
+        <p>Manicure - R120</p>
+        <p>Pedicure - R150</p>
+        <p>Acrylic - R250</p>
+        <p>Gel Set - R220</p>
+    </div>
+</div>
+
+    <p>Luxury nail care and styling 💅</p>
+
+    <a href="index.html" class="btn">Back Home</a>
+
+    <script>
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+    </script>
 
 </body>
 </html>
