@@ -1,20 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Gallery</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gallery - FaithM NailBar</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+   BRAND COLORS
+========================= */
+:root{
+    --brown:#5a3b33;
+    --dark:#3e2a25;
+    --pink:#d6a1ad;
+    --nude:#f6e8e1;
+}
+
+/* =========================
+   GLOBAL
+========================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Poppins, sans-serif;
+    background:var(--nude);
+    color:var(--dark);
+}
+
+/* =========================
+   HEADER
+========================= */
+header{
+    background:var(--dark);
+    color:white;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:15px 20px;
+}
+
+header a{
+    color:white;
+    text-decoration:none;
+}
+
+/* =========================
+   TITLE
+========================= */
+h1{
+    text-align:center;
+    margin:40px 0 20px;
+    color:var(--brown);
+}
+
+/* =========================
+   GALLERY GRID
+========================= */
+.gallery{
+    max-width:1000px;
+    margin:auto;
+    padding:20px;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+/* IMAGE STYLE */
+.gallery img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    border-radius:18px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+
+    transition:0.4s;
+}
+
+/* HOVER EFFECT */
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+/* BACK BUTTON */
+.back{
+    display:block;
+    text-align:center;
+    margin:30px auto 60px;
+
+    text-decoration:none;
+    color:white;
+    background:var(--brown);
+
+    width:160px;
+    padding:12px;
+    border-radius:30px;
+
+    transition:0.3s;
+}
+
+.back:hover{
+    background:var(--pink);
+    color:var(--dark);
+}
+
+/* ANIMATION */
+.gallery img{
+    animation:fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .gallery img{
+        height:220px;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
-<h2>Gallery</h2>
+<!-- HEADER -->
+<header>
+    <div>FaithM NailBar</div>
+    <a href="index.html">Home</a>
+</header>
 
-<img src="https://yourclassylook.com/wp-content/uploads/2021/12/IMG_6156.jpg" width="300">
-<img src="https://lovenailideas.com/wp-content/uploads/2024/04/light-pink-ombre-nails-witl-glitter_nailsbyalsn_love-nail-ideas.webp" width="300">    
-<img src="https://m.media-amazon.com/images/I/71mCOMmpIxL.jpg" width="300">
+<h1>Our Nail Gallery 💅</h1>
 
-<a href="index.html">Back Home</a>
+<!-- GALLERY -->
+<div class="gallery">
+
+    <img src="https://yourclassylook.com/wp-content/uploads/2021/12/IMG_6156.jpg">
+
+    <img src="https://lovenailideas.com/wp-content/uploads/2024/04/light-pink-ombre-nails-witl-glitter_nailsbyalsn_love-nail-ideas.webp">
+
+    <img src="https://m.media-amazon.com/images/I/71mCOMmpIxL.jpg">
+
+</div>
+
+<a class="back" href="index.html">← Back Home</a>
 
 </body>
 </html>
+
+
