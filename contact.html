@@ -1,34 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Contact</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact - FaithM NailBar</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+   BRAND COLORS
+========================= */
+:root{
+    --brown:#5a3b33;
+    --dark:#3e2a25;
+    --pink:#d6a1ad;
+    --nude:#f6e8e1;
+    --white:#ffffff;
+}
+
+/* =========================
+   GLOBAL
+========================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Poppins, sans-serif;
+    background:var(--nude);
+    color:var(--dark);
+}
+
+/* =========================
+   HEADER BAR
+========================= */
+header{
+    background:var(--dark);
+    color:white;
+    padding:15px 20px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+}
+
+/* =========================
+   CONTAINER CARD
+========================= */
+.container{
+    max-width:600px;
+    margin:80px auto;
+    background:white;
+    padding:30px;
+
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+    animation:fadeIn 0.8s ease;
+}
+
+h1{
+    text-align:center;
+    color:var(--brown);
+    margin-bottom:10px;
+}
+
+p{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+/* =========================
+   INSTAGRAM BUTTON
+========================= */
+.insta{
+    display:block;
+    text-align:center;
+    margin-bottom:20px;
+
+    background:linear-gradient(135deg, var(--pink), var(--brown));
+    color:white;
+
+    padding:12px;
+    border-radius:30px;
+
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.insta:hover{
+    transform:scale(1.03);
+}
+
+/* =========================
+   FORM
+========================= */
+form{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+input{
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    outline:none;
+    transition:0.3s;
+}
+
+input:focus{
+    border-color:var(--pink);
+    box-shadow:0 0 0 3px rgba(214,161,173,0.2);
+}
+
+/* BUTTON */
+input[type="submit"]{
+    background:var(--brown);
+    color:white;
+    border:none;
+    cursor:pointer;
+    font-weight:600;
+}
+
+input[type="submit"]:hover{
+    background:var(--pink);
+    color:var(--dark);
+}
+
+/* BACK LINK */
+.back{
+    display:block;
+    text-align:center;
+    margin-top:20px;
+    text-decoration:none;
+    color:var(--brown);
+    font-weight:600;
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .container{
+        margin:40px 15px;
+        padding:20px;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
-<h2>Contact Us</h2>
+<header>
+    <div>FaithM NailBar</div>
+    <a href="index.html">Home</a>
+</header>
 
-<a href="https://www.instagram.com/faith_m.nailbar/">Visit Instagram</a>
+<div class="container">
 
-<form>
-  <label>First Name:</label><br>
-  <input type="text"><br>
+    <h1>Contact Us</h1>
 
-  <label>Last Name:</label><br>
-  <input type="text"><br>
+    <p>We would love to hear from you 💅</p>
 
-  <label>Contact Number:</label><br>
-  <input type="text"><br>
+    <a class="insta" href="https://www.instagram.com/faith_m.nailbar/" target="_blank">
+        Visit Our Instagram
+    </a>
 
-  <label>Enquiry:</label><br>
-  <input type="text"><br><br>
+    <form>
+        <input type="text" placeholder="First Name">
+        <input type="text" placeholder="Last Name">
+        <input type="text" placeholder="Contact Number">
+        <input type="text" placeholder="Your Enquiry">
 
-  <input type="submit" value="Submit">
-</form>
+        <input type="submit" value="Send Message">
+    </form>
 
-<a href="index.html">Back Home</a>
+    <a class="back" href="index.html">← Back Home</a>
+
+</div>
 
 </body>
 </html>
